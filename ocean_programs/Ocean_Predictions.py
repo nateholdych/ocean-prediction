@@ -1,7 +1,10 @@
+#Logic for determining personality characteristics based on OCEAN traits
+#Nate Holdych 2/23/2021
+
 class Characteristic:
     # Class defining characteristics to be calculated using OCEAN traits
     
-    def __init__(self, o, c, e, a, n):
+    def __init__(self, name, o, c, e, a, n, description = ""):
         # Every parameter is the weight of each respective OCEAN trait for the calculated characteristic
         # Pass a weight of 0 if trait is not used
         
@@ -11,6 +14,9 @@ class Characteristic:
         self.weightA = a
         self.weightN = n
         self.weights = [o,c,e,a,n]
+
+        self.name = name
+        self.description = description
 class Score:
     # For OCEAN scores such as user score and average score
     
