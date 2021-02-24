@@ -1,5 +1,5 @@
 #Demo of Ocean_Predictions
-#Nate Holdych 2/23/2021
+#Nate Holdych 2/24/2021
 
 import Ocean_Predictions
 
@@ -54,3 +54,29 @@ for role in roles:
 
 print("Team role: " + userRole.name)
 print(userRole.description)
+
+#Political compass map coordinate system
+polSocial = Ocean_Predictions.Characteristic("Social Political Leaning",53,-26,-5,-12,13)
+polEconomic = Ocean_Predictions.Characteristic("Economic Political leaning",48,-22,-14,20,43)
+
+polMapWidth = 200 #This will be the width of the political compass map on the screen
+polMapHeight = 200 #This will be the height of the political compass map on the screen
+economicPos = user.calc(polEconomic,avg)
+socialPos = user.calc(polSocial,avg)
+polMapX = polMapWidth/2 * (economicPos * -1 + 1)
+polMapY = polMapHeight/2 * (socialPos * -1 + 1)
+
+print("\n")
+print("Your x position on the political compass (0-"+ str(polMapWidth) + "): " + str(polMapX))
+print("Your y position on the political compass (0-"+ str(polMapHeight) + "): " + str(polMapY))
+
+if(economicPos < 0):
+    if(socialPos < 0):
+        print("Authoritarian Right")
+    else:
+        print("Authoritarian Left")
+else:
+    if(socialPos < 0):
+        print("Libertarian Right")
+    else:
+        print("Libertarian Left")
