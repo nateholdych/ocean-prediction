@@ -1,0 +1,29 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red22\green21\blue22;
+\red22\green21\blue22;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0\c0;\cssrgb\c11373\c10980\c11373;
+\cssrgb\c11373\c10980\c11373;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 Documentation for Ocean_Predictions\
+\
+Ocean_Predictions.getPredictions(userS,avgS):\
+userS = Dictionary of user OCEAN Scores\
+avgS = Dictionary of all users\'92 average scores\
+\
+format for inputted dictionaries:\
+\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 \{"opn": number, "ext": number, "con": number, "agr": number, "neu": number\}\
+\
+returns dictionary containing:\
+"cre\'94: number (-1 to 1) of user\'92s predicted creativity\
+"ext\'94: \cf2 \cb3 \outl0\strokewidth0 number (-1 to 1) of user\'92s predicted external success\cf2 \cb3 \outl0\strokewidth0 \strokec4 \
+"intr":\cf2 \cb3 \outl0\strokewidth0  number (-1 to 1) of user\'92s predicted internal success\cf2 \cb3 \outl0\strokewidth0 \strokec4 \
+"crim":\cf2 \cb3 \outl0\strokewidth0  number (-1 to 1) of user\'92s predicted criminal chance\cf2 \cb3 \outl0\strokewidth0 \strokec4 \
+"lead":\cf2 \cb3 \outl0\strokewidth0  number (-1 to 1) of user\'92s predicted leadership level\cf2 \cb3 \outl0\strokewidth0 \strokec4 \
+"polX":\cf2 \cb3 \outl0\strokewidth0  number (-1 to 1) of user\'92s predicted x position unit vector on political compass\cf2 \cb3 \outl0\strokewidth0 \strokec4 \
+"polY":\cf2 \cb3 \outl0\strokewidth0  number (-1 to 1)\cf2 \cb3  of user\'92s predicted y position unit vector on political compass\cf2 \cb3 \outl0\strokewidth0 \strokec4 \
+"role": number (0 to 4) of user\'92s predicted role in a team. Values correspond to:\
+["analyst","designer","engineer","tester","maintainer"]}
